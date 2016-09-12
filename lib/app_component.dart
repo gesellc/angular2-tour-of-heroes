@@ -13,7 +13,7 @@ class Hero {
         <h1>{{title}}</h1>
         <h2>My Heroes</h2>
         <ul class="heroes">
-          <li *ngFor="let hero of heroes">  <!-- // The (*) prefix to ngFor indicates that the <li> element and its children constitute a master template. -->
+          <li *ngFor="let hero of heroes" (click)="onSelect(hero)">  <!-- // The (*) prefix to ngFor indicates that the <li> element and its children constitute a master template. -->
             <span class="badge">{{hero.id}}</span> {{hero.name}}
           </li>
         </ul>
@@ -97,3 +97,4 @@ final List<Hero> mockHeroes = [
 // TODO: Learn more about interpolation in the Displaying Data chapter. https://angular.io/docs/dart/latest/guide/displaying-data.html
 // TODO: Learn more about ngModel in the Forms and Template Syntax chapters. https://angular.io/docs/dart/latest/guide/forms.html#ngModel https://angular.io/docs/dart/latest/guide/template-syntax.html#ngModel
 // TODO: Learn more about ngFor and template input variables in the Displaying Data and Template Syntax chapters. https://angular.io/docs/dart/latest/guide/displaying-data.html#ngFor https://angular.io/docs/dart/latest/guide/template-syntax.html#ngFor
+// TODO: Learn more about Event Binding in the User Input and Templating Syntax chapters. https://angular.io/docs/dart/latest/guide/user-input.html https://angular.io/docs/dart/latest/guide/template-syntax.html#event-binding
