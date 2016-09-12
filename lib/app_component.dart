@@ -1,4 +1,12 @@
 import 'package:angular2/core.dart';
+
+class Hero {
+  final int id;
+  String name;
+
+  Hero(this.id, this.name);
+}
+
 @Component(
     selector: 'my-app',
     template: '''
@@ -17,10 +25,4 @@ class AppComponent {
 }
 
 // TODO: Learn more about interpolation in the Displaying Data chapter. https://angular.io/docs/dart/latest/guide/displaying-data.html
-
-class Hero {
-  final int id;
-  String name;
-
-  Hero(this.id, this.name);
-}
+// TODO: Learn more about ngModel in the Forms and Template Syntax chapters. https://angular.io/docs/dart/latest/guide/forms.html#ngModel https://angular.io/docs/dart/latest/guide/template-syntax.html#ngModel
