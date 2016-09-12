@@ -1,5 +1,19 @@
 import 'package:angular2/core.dart';
 @Component(
     selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>')
-class AppComponent {}
+    template: '<h1>{{title}}</h1><h2>{{hero.name}} details</h2>')
+class AppComponent {
+
+  String title = 'Tour of Heroes';
+  //var hero = 'Windstorm';
+  Hero hero = new Hero(1, 'Windstorm');
+}
+
+// TODO: Learn more about interpolation in the Displaying Data chapter. https://angular.io/docs/dart/latest/guide/displaying-data.html
+
+class Hero {
+  final int id;
+  String name;
+
+  Hero(this.id, this.name);
+}
