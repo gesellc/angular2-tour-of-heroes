@@ -7,6 +7,19 @@ class Hero {
   Hero(this.id, this.name);
 }
 
+final List<Hero> mockHeroes = [
+  new Hero(11, 'Mr. Nice'),
+  new Hero(12, 'Narco'),
+  new Hero(13, 'Bombasto'),
+  new Hero(14, 'Celeritas'),
+  new Hero(15, 'Magneta'),
+  new Hero(16, 'RubberMan'),
+  new Hero(17, 'Dynama'),
+  new Hero(18, 'Dr IQ'),
+  new Hero(19, 'Magma'),
+  new Hero(20, 'Tornado')
+];
+
 @Component(
     selector: 'my-app',
     template: '''
@@ -17,11 +30,13 @@ class Hero {
             <span class="badge">{{hero.id}}</span> {{hero.name}}
           </li>
         </ul>
-        <h2>{{hero.name}} details!</h2>
-        <div><label>id: </label>{{hero.id}}</div>
-        <div>
-          <label>name: </label>
-          <input [(ngModel)]="hero.name" placeholder="name">
+        <div *ngIf="selectedHero != null">
+          <h2>{{selectedHero.name}} details!</h2>
+          <div><label>id: </label>{{selectedHero.id}}</div>
+          <div>
+            <label>name: </label>
+            <input [(ngModel)]="selectedHero.name" placeholder="name">
+          </div>
         </div>''',
     styles: const [
       '''
@@ -76,25 +91,18 @@ class Hero {
 class AppComponent {
 
   String title = 'Tour of Heroes';
-  //var hero = 'Windstorm';
-  Hero hero = new Hero(1, 'Windstorm');
+  //Hero hero = new Hero(1, 'Windstorm');
+  Hero selectedHero;
   final List<Hero> heroes = mockHeroes;
-}
 
-final List<Hero> mockHeroes = [
-  new Hero(11, 'Mr. Nice'),
-  new Hero(12, 'Narco'),
-  new Hero(13, 'Bombasto'),
-  new Hero(14, 'Celeritas'),
-  new Hero(15, 'Magneta'),
-  new Hero(16, 'RubberMan'),
-  new Hero(17, 'Dynama'),
-  new Hero(18, 'Dr IQ'),
-  new Hero(19, 'Magma'),
-  new Hero(20, 'Tornado')
-];
+  onSelect(Hero hero) {
+    selectedHero = hero;
+  }
+
+}
 
 // TODO: Learn more about interpolation in the Displaying Data chapter. https://angular.io/docs/dart/latest/guide/displaying-data.html
 // TODO: Learn more about ngModel in the Forms and Template Syntax chapters. https://angular.io/docs/dart/latest/guide/forms.html#ngModel https://angular.io/docs/dart/latest/guide/template-syntax.html#ngModel
 // TODO: Learn more about ngFor and template input variables in the Displaying Data and Template Syntax chapters. https://angular.io/docs/dart/latest/guide/displaying-data.html#ngFor https://angular.io/docs/dart/latest/guide/template-syntax.html#ngFor
 // TODO: Learn more about Event Binding in the User Input and Templating Syntax chapters. https://angular.io/docs/dart/latest/guide/user-input.html https://angular.io/docs/dart/latest/guide/template-syntax.html#event-binding
+// TODO: Learn more about ngIf, ngFor and other structural directives in the Structural Directives and Template Syntax chapters. https://angular.io/docs/dart/latest/guide/structural-directives.html https://angular.io/docs/dart/latest/guide/template-syntax.html#directives
