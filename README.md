@@ -7,9 +7,11 @@ And the adventure begins... [here](https://angular.io/docs/dart/latest/tutorial/
 
 ## Journey Journal
 
-### Chapter 1 - The Road We’ve Travelled
+### Chapter 1 - We build a simple hero editor
 
-#### Let’s take stock of what we’ve built.
+#### The Road We’ve Travelled
+
+Let’s take stock of what we’ve built.
 
 * Our Tour of Heroes uses the double curly braces of interpolation (a form of one-way data binding) to display the application title and properties of a __Hero__ object.
 * We wrote a multi-line template using Dart's template strings to make our template readable.
@@ -19,3 +21,5 @@ And the adventure begins... [here](https://angular.io/docs/dart/latest/tutorial/
 #### The Road Ahead
 
 Our Tour of Heroes only displays one hero and we really want to display a list of heroes. We also want to allow the user to select a hero and display their details. We’ll learn more about how to retrieve lists, bind them to the template, and allow a user to select it in the next tutorial chapter.
+
+### Chapter 2 - We build a master/detail page with a list of heroes
