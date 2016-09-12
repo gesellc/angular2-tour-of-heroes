@@ -7,7 +7,7 @@ import 'package:angular2/core.dart';
         <div><label>id: </label>{{hero.id}}</div>
         <div>
           <label>name: </label>
-          <input value="{{hero.name}}" placeholder="name">
+          <input [(ngModel)]="hero.name" placeholder="name">
         </div>''')
 class AppComponent {
 
