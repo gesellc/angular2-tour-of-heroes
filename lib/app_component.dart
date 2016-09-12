@@ -24,5 +24,18 @@ class AppComponent {
   Hero hero = new Hero(1, 'Windstorm');
 }
 
+final List<Hero> mockHeroes = [
+  new Hero(11, 'Mr. Nice'),
+  new Hero(12, 'Narco'),
+  new Hero(13, 'Bombasto'),
+  new Hero(14, 'Celeritas'),
+  new Hero(15, 'Magneta'),
+  new Hero(16, 'RubberMan'),
+  new Hero(17, 'Dynama'),
+  new Hero(18, 'Dr IQ'),
+  new Hero(19, 'Magma'),
+  new Hero(20, 'Tornado')
+];
+
 // TODO: Learn more about interpolation in the Displaying Data chapter. https://angular.io/docs/dart/latest/guide/displaying-data.html
 // TODO: Learn more about ngModel in the Forms and Template Syntax chapters. https://angular.io/docs/dart/latest/guide/forms.html#ngModel https://angular.io/docs/dart/latest/guide/template-syntax.html#ngModel
