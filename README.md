@@ -1,8 +1,8 @@
 # THE HERO EDITOR - Angular 2 for Dart
 
-Once upon a time... We set out to build an app to help a staffing agency manage its stable of heroes. Even heroes need to find work... 
+Once upon a time, we set out to build an app to help a staffing agency manage its stable of heroes. Even heroes need to find work.
 
-And the adventure begins [here](https://angular.io/docs/dart/latest/tutorial/)
+And the adventure begins... [here](https://angular.io/docs/dart/latest/tutorial/).
 
 
 ## Journey Journal
