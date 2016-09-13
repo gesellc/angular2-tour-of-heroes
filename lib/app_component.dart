@@ -24,7 +24,7 @@ final List<Hero> mockHeroes = [
       <ul class="heroes">
         <li *ngFor="let hero of heroes"
           [class.selected]="hero == selectedHero"
-          (click)="onSelect(hero)"
+          (click)="onSelect(hero)">
           <!-- // The (*) prefix to ngFor indicates that the <li> element and its children constitute a master template. -->
           <!-- property binding, a binding in which data flows one way from the data source (the expression hero == selectedHero) to a property of class -->
           <span class="badge">{{hero.id}}</span> {{hero.name}}
