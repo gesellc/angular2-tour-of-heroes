@@ -1,6 +1,7 @@
 import 'package:angular2/core.dart';
 
 import 'hero.dart';
+import 'hero_detail_component.dart';
 
 final List<Hero> mockHeroes = [
   new Hero(11, 'Mr. Nice'),
@@ -28,7 +29,8 @@ final List<Hero> mockHeroes = [
             <!-- property binding, a binding in which data flows one way from the data source (the expression hero == selectedHero) to a property of class -->
             <span class="badge">{{hero.id}}</span> {{hero.name}}
           </li>
-        </ul>''',
+        </ul>
+        <my-hero-detail [hero]="selectedHero"></my-hero-detail>''',
     styles: const [
       '''
       .selected {
