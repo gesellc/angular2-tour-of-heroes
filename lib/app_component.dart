@@ -26,7 +26,11 @@ final List<Hero> mockHeroes = [
         <h1>{{title}}</h1>
         <h2>My Heroes</h2>
         <ul class="heroes">
-          <li *ngFor="let hero of heroes" (click)="onSelect(hero)">  <!-- // The (*) prefix to ngFor indicates that the <li> element and its children constitute a master template. -->
+          <li *ngFor="let hero of heroes"
+            [class.selected]="hero == selectedHero"
+            (click)="onSelect(hero)">
+            <!-- // The (*) prefix to ngFor indicates that the <li> element and its children constitute a master template. -->
+            <!-- property binding, a binding in which data flows one way from the data source (the expression hero == selectedHero) to a property of class -->
             <span class="badge">{{hero.id}}</span> {{hero.name}}
           </li>
         </ul>
@@ -106,3 +110,4 @@ class AppComponent {
 // TODO: Learn more about ngFor and template input variables in the Displaying Data and Template Syntax chapters. https://angular.io/docs/dart/latest/guide/displaying-data.html#ngFor https://angular.io/docs/dart/latest/guide/template-syntax.html#ngFor
 // TODO: Learn more about Event Binding in the User Input and Templating Syntax chapters. https://angular.io/docs/dart/latest/guide/user-input.html https://angular.io/docs/dart/latest/guide/template-syntax.html#event-binding
 // TODO: Learn more about ngIf, ngFor and other structural directives in the Structural Directives and Template Syntax chapters. https://angular.io/docs/dart/latest/guide/structural-directives.html https://angular.io/docs/dart/latest/guide/template-syntax.html#directives
+// TODO: Learn more about property bindings in the Template Syntax chapter. https://angular.io/docs/dart/latest/guide/template-syntax.html#property-binding

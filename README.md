@@ -23,3 +23,16 @@ Let’s take stock of what we’ve built.
 Our Tour of Heroes only displays one hero and we really want to display a list of heroes. We also want to allow the user to select a hero and display their details. We’ll learn more about how to retrieve lists, bind them to the template, and allow a user to select it in the next tutorial chapter.
 
 ### Chapter 2 - We build a master/detail page with a list of heroes
+
+#### The Road We’ve Travelled
+
+Here’s what we achieved in this chapter:
+
+* Our Tour of Heroes now displays a list of selectable heroes
+* We added the ability to select a hero and show the hero’s details
+* We learned how to use the built-in directives ngIf and ngFor in a component’s template
+* Run the live example (view source) for this part.
+
+#### The Road Ahead
+
+Our Tour of Heroes has grown, but it’s far from complete. We can't put the entire app into a single component. We need to break it up into sub-components and teach them to work together as we learn in the next chapter.
