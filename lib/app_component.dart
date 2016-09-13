@@ -86,6 +86,9 @@ class AppComponent {
     selectedHero = hero;
   }
 
+  void getHeroes() {
+    heroes = _heroService.getHeroes();
+  }
 }
 
 // TODO: Learn more about interpolation in the Displaying Data chapter. https://angular.io/docs/dart/latest/guide/displaying-data.html
