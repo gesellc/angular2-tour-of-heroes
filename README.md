@@ -31,7 +31,6 @@ Here’s what we achieved in this chapter:
 * Our Tour of Heroes now displays a list of selectable heroes
 * We added the ability to select a hero and show the hero’s details
 * We learned how to use the built-in directives __ngIf__ and __ngFor__ in a component’s template
-* Run the live example (view source) for this part.
 
 #### The Road Ahead
 
