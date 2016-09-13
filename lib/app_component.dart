@@ -88,7 +88,7 @@ class AppComponent implements OnInit {
   }
 
   Future<Null> getHeroes() async {
-    heroes = await _heroService.getHeroes();
+    heroes = await _heroService.getHeroesSlowly();
   }
 
   void ngOnInit() {
