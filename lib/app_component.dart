@@ -2,19 +2,7 @@ import 'package:angular2/core.dart';
 
 import 'hero.dart';
 import 'hero_detail_component.dart';
-
-final List<Hero> mockHeroes = [
-  new Hero(11, 'Mr. Nice'),
-  new Hero(12, 'Narco'),
-  new Hero(13, 'Bombasto'),
-  new Hero(14, 'Celeritas'),
-  new Hero(15, 'Magneta'),
-  new Hero(16, 'RubberMan'),
-  new Hero(17, 'Dynama'),
-  new Hero(18, 'Dr IQ'),
-  new Hero(19, 'Magma'),
-  new Hero(20, 'Tornado')
-];
+import 'hero_service.dart';
 
 @Component(
     selector: 'my-app',
@@ -88,7 +76,10 @@ class AppComponent {
 
   String title = 'Tour of Heroes';
   Hero selectedHero;
-  final List<Hero> heroes = mockHeroes;
+  List<Hero> heroes;
+  final HeroService _heroService;
+
+  AppComponent(this._heroService);
 
   onSelect(Hero hero) {
     selectedHero = hero;
@@ -102,3 +93,4 @@ class AppComponent {
 // TODO: Learn more about Event Binding in the User Input and Templating Syntax chapters. https://angular.io/docs/dart/latest/guide/user-input.html https://angular.io/docs/dart/latest/guide/template-syntax.html#event-binding
 // TODO: Learn more about ngIf, ngFor and other structural directives in the Structural Directives and Template Syntax chapters. https://angular.io/docs/dart/latest/guide/structural-directives.html https://angular.io/docs/dart/latest/guide/template-syntax.html#directives
 // TODO: Learn more about property bindings in the Template Syntax chapter. https://angular.io/docs/dart/latest/guide/template-syntax.html#property-binding
+// TODO: Learn more about Dependency Injection in the Dependency Injection chapter. https://angular.io/docs/dart/latest/guide/dependency-injection.html
