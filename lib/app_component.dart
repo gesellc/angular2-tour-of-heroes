@@ -70,7 +70,8 @@ import 'hero_service.dart';
       }
     '''
     ],
-    directives: const [HeroDetailComponent]
+    directives: const [HeroDetailComponent],
+    providers: const [HeroService]
     )
 class AppComponent {
 
@@ -81,7 +82,7 @@ class AppComponent {
 
   AppComponent(this._heroService);
 
-  onSelect(Hero hero) {
+  void onSelect(Hero hero) {
     selectedHero = hero;
   }
 
