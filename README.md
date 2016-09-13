@@ -35,3 +35,22 @@ Here’s what we achieved in this chapter:
 #### The Road Ahead
 
 Our Tour of Heroes has grown, but it’s far from complete. We can't put the entire app into a single component. We need to break it up into sub-components and teach them to work together as we learn in the next chapter.
+
+### Chapter 3 - We refactor the master/detail view into separate components
+
+#### The Road We’ve Travelled
+
+Let’s take stock of what we’ve built.
+
+* We created a reusable component
+* We learned how to make a component accept input
+* We learned to bind a parent component to a child component.
+* We learned to declare the application directives we need in a directives list.
+
+#### The Road Ahead
+
+Our Tour of Heroes has become more reusable with shared components.
+
+We're still getting our (mock) data within the AppComponent. That's not sustainable. We should refactor data access to a separate service and share it among the components that need data.
+
+We’ll learn to create services in the next tutorial chapter.
