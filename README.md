@@ -45,12 +45,12 @@ Let’s take stock of what we’ve built.
 * We created a reusable component
 * We learned how to make a component accept input
 * We learned to bind a parent component to a child component.
-* We learned to declare the application directives we need in a directives list.
+* We learned to declare the application directives we need in a __directives__ list.
 
 #### The Road Ahead
 
 Our Tour of Heroes has become more reusable with shared components.
 
-We're still getting our (mock) data within the AppComponent. That's not sustainable. We should refactor data access to a separate service and share it among the components that need data.
+We're still getting our (mock) data within the __AppComponent__. That's not sustainable. We should refactor data access to a separate service and share it among the components that need data.
 
 We’ll learn to create services in the next tutorial chapter.
