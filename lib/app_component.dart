@@ -30,7 +30,8 @@ final List<Hero> mockHeroes = [
             <span class="badge">{{hero.id}}</span> {{hero.name}}
           </li>
         </ul>
-        <my-hero-detail [hero]="selectedHero"></my-hero-detail>''',
+        <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+      ''',
     styles: const [
       '''
       .selected {
@@ -80,7 +81,9 @@ final List<Hero> mockHeroes = [
         border-radius: 4px 0px 0px 4px;
       }
     '''
-    ])
+    ],
+    directives: const [HeroDetailComponent]
+    )
 class AppComponent {
 
   String title = 'Tour of Heroes';
