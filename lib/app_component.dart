@@ -1,4 +1,5 @@
 import 'package:angular2/core.dart';
+import 'dart:async';
 
 import 'hero.dart';
 import 'hero_detail_component.dart';
@@ -86,8 +87,8 @@ class AppComponent implements OnInit {
     selectedHero = hero;
   }
 
-  void getHeroes() {
-    heroes = _heroService.getHeroes();
+  Future<Null> getHeroes() async {
+    heroes = await _heroService.getHeroes();
   }
 
   void ngOnInit() {
