@@ -95,7 +95,6 @@ final List<Hero> mockHeroes = [
 class AppComponent {
 
   String title = 'Tour of Heroes';
-  //Hero hero = new Hero(1, 'Windstorm');
   Hero selectedHero;
   final List<Hero> heroes = mockHeroes;
 
