@@ -19,19 +19,19 @@ final List<Hero> mockHeroes = [
 @Component(
     selector: 'my-app',
     template: '''
-        <h1>{{title}}</h1>
-        <h2>My Heroes</h2>
-        <ul class="heroes">
-          <li *ngFor="let hero of heroes"
-            [class.selected]="hero == selectedHero"
-            (click)="onSelect(hero)">
-            <!-- // The (*) prefix to ngFor indicates that the <li> element and its children constitute a master template. -->
-            <!-- property binding, a binding in which data flows one way from the data source (the expression hero == selectedHero) to a property of class -->
-            <span class="badge">{{hero.id}}</span> {{hero.name}}
-          </li>
-        </ul>
-        <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-      ''',
+      <h1>{{title}}</h1>
+      <h2>My Heroes</h2>
+      <ul class="heroes">
+        <li *ngFor="let hero of heroes"
+          [class.selected]="hero == selectedHero"
+          (click)="onSelect(hero)"
+          <!-- // The (*) prefix to ngFor indicates that the <li> element and its children constitute a master template. -->
+          <!-- property binding, a binding in which data flows one way from the data source (the expression hero == selectedHero) to a property of class -->
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </li>
+      </ul>
+      <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+    ''',
     styles: const [
       '''
       .selected {
