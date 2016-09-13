@@ -1,4 +1,5 @@
 import 'package:angular2/core.dart';
+import 'package:angular2/router.dart';
 
 import 'heroes_component.dart';
 import 'hero_service.dart';
@@ -9,8 +10,8 @@ import 'hero_service.dart';
       <h1>{{title}}</h1>
       <my-heroes></my-heroes>
       ''',
-    directives: const [HeroesComponent],
-    providers: const [HeroService])
+    directives: const [ROUTER_DIRECTIVES],
+    providers: const [HeroService, ROUTER_PROVIDERS])
 class AppComponent {
   String title = 'Tour of Heroes';
 }
