@@ -48,8 +48,8 @@ import 'hero_service.dart';
       }
       .heroes li:hover {
         color: #607D8B;
-        background-color: #EEE;
-        left: .1em;
+        background-color: #d3d6d8;
+        /* left: .1em; */
       }
       .heroes .text {
         position: relative;
