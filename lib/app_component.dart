@@ -103,3 +103,4 @@ class AppComponent implements OnInit {
 // TODO: Learn more about property bindings in the Template Syntax chapter. https://angular.io/docs/dart/latest/guide/template-syntax.html#property-binding
 // TODO: Learn more about Dependency Injection in the Dependency Injection chapter. https://angular.io/docs/dart/latest/guide/dependency-injection.html
 // TODO: Learn more about lifecycle hooks in the Lifecycle Hooks chapter. https://angular.io/docs/dart/latest/guide/lifecycle-hooks.html
+// TODO: We are simplifying in this Tutorial. Learn about Futures in the tutorial Asynchronous Programming: Futures. https://www.dartlang.org/docs/tutorials/futures/
