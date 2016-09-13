@@ -54,3 +54,21 @@ Our Tour of Heroes has become more reusable with shared components.
 We're still getting our (mock) data within the __AppComponent__. That's not sustainable. We should refactor data access to a separate service and share it among the components that need data.
 
 We’ll learn to create services in the next tutorial chapter.
+
+### Chapter 4 - We create a reusable service to manage our hero data calls
+
+#### The Road We’ve Travelled
+
+Let’s take stock of what we’ve built.
+
+* We created a service class that can be shared by many components.
+* We used the __ngOnInit__ Lifecycle Hook to get our heroes when our __AppComponent__ activates.
+* We defined our __HeroService__ as a provider for our __AppComponent__.
+* We created mock hero data and imported them into our service.
+* We designed our service to return a Future and our component to get our data from the Future.
+
+#### The Road Ahead
+
+Our Tour of Heroes has become more reusable using shared components and services. We want to create a dashboard, add menu links that route between the views, and format data in a template. As our app evolves, we’ll learn how to design it to make it easier to grow and maintain.
+
+We learn about Angular Component Router and navigation among the views in the next tutorial chapter.
