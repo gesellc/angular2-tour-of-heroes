@@ -73,7 +73,7 @@ import 'hero_service.dart';
     directives: const [HeroDetailComponent],
     providers: const [HeroService]
     )
-class AppComponent {
+class AppComponent implements OnInit {
 
   String title = 'Tour of Heroes';
   Hero selectedHero;
@@ -89,6 +89,10 @@ class AppComponent {
   void getHeroes() {
     heroes = _heroService.getHeroes();
   }
+
+  void ngOnInit() {
+    getHeroes();
+  }
 }
 
 // TODO: Learn more about interpolation in the Displaying Data chapter. https://angular.io/docs/dart/latest/guide/displaying-data.html
@@ -98,3 +102,4 @@ class AppComponent {
 // TODO: Learn more about ngIf, ngFor and other structural directives in the Structural Directives and Template Syntax chapters. https://angular.io/docs/dart/latest/guide/structural-directives.html https://angular.io/docs/dart/latest/guide/template-syntax.html#directives
 // TODO: Learn more about property bindings in the Template Syntax chapter. https://angular.io/docs/dart/latest/guide/template-syntax.html#property-binding
 // TODO: Learn more about Dependency Injection in the Dependency Injection chapter. https://angular.io/docs/dart/latest/guide/dependency-injection.html
+// TODO: Learn more about lifecycle hooks in the Lifecycle Hooks chapter. https://angular.io/docs/dart/latest/guide/lifecycle-hooks.html
