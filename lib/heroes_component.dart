@@ -1,5 +1,7 @@
-import 'package:angular2/core.dart';
 import 'dart:async';
+
+import 'package:angular2/router.dart';
+import 'package:angular2/core.dart';
 
 import 'hero.dart';
 import 'hero_detail_component.dart';
@@ -7,17 +9,16 @@ import 'hero_service.dart';
 
 @Component(
     selector: 'my-heroes',
-    templateUrl: 'heroes_componentqqqq.html',
+    templateUrl: 'heroes_component.html',
     styleUrls: const ['heroes_component.css'],
-    directives: const [HeroDetailComponent],
     )
 class HeroesComponent implements OnInit {
-
-  Hero selectedHero;
-  List<Hero> heroes;
+  final Router _router;
   final HeroService _heroService;
+  List<Hero> heroes;
+  Hero selectedHero;
 
-  HeroesComponent(this._heroService/*, this._router*/); // this router has been introduced too early
+  HeroesComponent(this._heroService, this._router); // this router has been introduced too early
 
   void onSelect(Hero hero) {
     selectedHero = hero;
@@ -30,6 +31,11 @@ class HeroesComponent implements OnInit {
   void ngOnInit() {
     getHeroes();
   }
+
+  Future<Null> gotoDetail() => _router.navigate([
+      'HeroDetail',
+      {'id': selectedHero.id.toString()}
+    ]);
 }
 
 // TODO: Learn more about interpolation in the Displaying Data chapter. https://angular.io/docs/dart/latest/guide/displaying-data.html
