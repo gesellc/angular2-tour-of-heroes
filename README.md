@@ -72,3 +72,22 @@ Let’s take stock of what we’ve built.
 Our Tour of Heroes has become more reusable using shared components and services. We want to create a dashboard, add menu links that route between the views, and format data in a template. As our app evolves, we’ll learn how to design it to make it easier to grow and maintain.
 
 We learn about Angular Component Router and navigation among the views in the next tutorial chapter.
+
+### Chapter 5 - We add the Angular Component Router and learn to navigate among the views
+
+#### The Road Behind
+
+We travelled a great distance in this chapter
+
+* We added the Angular _Component Router_ to navigate among different components.
+* We learned how to create router links to represent navigation menu items.
+* We used router link parameters to navigate to the details of user selected hero.
+* We shared the __HeroService__ among multiple components.
+* We moved HTML and CSS out of the component file and into their own files.
+* We added the __uppercase__ pipe to format data.
+
+#### The Road Ahead
+
+We have much of the foundation we need to build an application. We're still missing a key piece: remote data access.
+
+In the next chapter, we’ll replace our mock data with data retrieved from a server using http.
