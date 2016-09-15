@@ -14,7 +14,7 @@ import 'hero.dart';
     styleUrls: const ['hero_detail_component.css'],
     )
 class HeroDetailComponent implements OnInit {
-  @Input()
+
   Hero hero;
 
   final HeroService _heroService;
