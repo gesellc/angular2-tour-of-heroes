@@ -1,22 +1,36 @@
-import 'package:angular2/core.dart';
+import 'dart:async';
+import 'dart:html' show window;
 
+
+import 'package:angular2/core.dart';
+import 'package:angular2/router.dart';
+
+import 'hero_service.dart';
 import 'hero.dart';
 
 @Component(
     selector: 'my-hero-detail',
-    template: '''
-      <div *ngIf="hero != null">
-        <h2>{{hero.name}} details!</h2>
-        <div><label>id: </label>{{hero.id}}</div>
-        <div>
-          <label>name: </label>
-          <input [(ngModel)]="hero.name" placeholder="name">
-        </div>
-      </div>''',
+    templateUrl: 'hero_detail_component.html',
     )
-class HeroDetailComponent {
+class HeroDetailComponent implements OnInit {
   @Input()
   Hero hero;
+
+  final HeroService _heroService;
+  final RouteParams _routeParams;
+
+  HeroDetailComponent(this._heroService, this._routeParams);
+
+  Future<Null> ngOnInit() async {
+    var idString = _routeParams.get('id');
+    var id = int.parse(idString ?? '', onError: (_) => null);
+    if (id != null) hero = await (_heroService.getHero(id));
+  }
+
+  void goBack() {
+    window.history.back();
+  }
 }
 
 // TODO: Learn more about @Input() in the Attribute Directives chapter. https://angular.io/docs/dart/latest/guide/attribute-directives.html#input
+// INFO: Going back too far could take us out of the application. That's acceptable in a demo. We'd guard against it in a real application, perhaps with the routerCanDeactivate hook. https://angular.io/docs/dart/latest/api/angular2.router/CanDeactivate-class.html
