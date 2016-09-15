@@ -18,7 +18,12 @@ import 'hero_service.dart';
           <span class="badge">{{hero.id}}</span> {{hero.name}}
         </li>
       </ul>
-      <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+      <div *ngIf="selectedHero != null">
+          <h2>
+            {{selectedHero.name | uppercase}} is my hero
+          </h2>
+        <button (click)="gotoDetail()">View Details</button>
+      </div>
     ''',
     styles: const [
       '''
@@ -102,3 +107,4 @@ class HeroesComponent implements OnInit {
 // TODO: Learn more about Dependency Injection in the Dependency Injection chapter. https://angular.io/docs/dart/latest/guide/dependency-injection.html
 // TODO: Learn more about lifecycle hooks in the Lifecycle Hooks chapter. https://angular.io/docs/dart/latest/guide/lifecycle-hooks.html
 // TODO: We are simplifying in this Tutorial. Learn about Futures in the tutorial Asynchronous Programming: Futures. https://www.dartlang.org/docs/tutorials/futures/
+// TODO: Learn about pipes in the Pipes chapter. https://angular.io/docs/dart/latest/guide/pipes.html
