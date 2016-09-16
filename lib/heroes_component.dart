@@ -36,6 +36,13 @@ class HeroesComponent implements OnInit {
       'HeroDetail',
       {'id': selectedHero.id.toString()}
     ]);
+
+  Future<Null> add(String name) async {
+    name = name.trim();
+    if (name.isEmpty) return;
+    heroes.add(await _heroService.create(name));
+    selectedHero = null;
+  }
 }
 
 // TODO: Learn more about interpolation in the Displaying Data chapter. https://angular.io/docs/dart/latest/guide/displaying-data.html
