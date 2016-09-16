@@ -31,6 +31,11 @@ class HeroDetailComponent implements OnInit {
   void goBack() {
     window.history.back();
   }
+
+  Future<Null> save() async {
+    await _heroService.update(hero);
+    goBack();
+  }
 }
 
 // TODO: Learn more about @Input() in the Attribute Directives chapter. https://angular.io/docs/dart/latest/guide/attribute-directives.html#input

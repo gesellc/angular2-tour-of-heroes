@@ -37,6 +37,19 @@ class HeroService {
 
   Future<Hero> getHero(int id) async =>
       (await getHeroes()).firstWhere((hero) => hero.id == id);
+
+  static final _headers = {'Content-Type': 'application/json'};
+
+  Future<Hero> update(Hero hero) async {
+    try {
+      var url = '$_heroesUrl/${hero.id}';
+      Response response =
+      await _http.put(url, headers: _headers, body: JSON.encode(hero));
+      return new Hero.fromJson(_extractData(response));
+    } catch (e) {
+      throw _handleError(e);
+    }
+  }
 }
 
 // TODO: Marking the method's body with async makes the method immediately return a Future object. That Future later completes with the method's return value. For more information on async functions, see Declaring async functions in the Dart language tour. https://www.dartlang.org/docs/dart-up-and-running/ch02.html#async
