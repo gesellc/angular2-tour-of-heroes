@@ -67,6 +67,15 @@ class HeroService {
       throw _handleError(e);
     }
   }
+
+  Future<Null> delete(int id) async {
+  try {
+    var url = '$_heroesUrl/$id';
+    await _http.delete(url, headers: _headers);
+  } catch (e) {
+    throw _handleError(e);
+  }
+}
 }
 
 // TODO: Marking the method's body with async makes the method immediately return a Future object. That Future later completes with the method's return value. For more information on async functions, see Declaring async functions in the Dart language tour. https://www.dartlang.org/docs/dart-up-and-running/ch02.html#async

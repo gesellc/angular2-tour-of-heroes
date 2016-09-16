@@ -11,7 +11,9 @@
         (click)="onSelect(hero)">
         <!-- // The (*) prefix to ngFor indicates that the <li> element and its children constitute a master template. -->
         <!-- property binding, a binding in which data flows one way from the data source (the expression hero == selectedHero) to a property of class -->
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
+        <span class="badge">{{hero.id}}</span>
+        <span>{{hero.name}}</span>
+        <button class="delete" (click)="delete(hero); $event.stopPropagation()">x</button>
     </li>
 </ul>
 <div *ngIf="selectedHero != null">

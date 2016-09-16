@@ -43,6 +43,12 @@ class HeroesComponent implements OnInit {
     heroes.add(await _heroService.create(name));
     selectedHero = null;
   }
+
+  Future<Null> delete(Hero hero) async {
+    await _heroService.delete(hero.id);
+    heroes.remove(hero);
+    if (selectedHero == hero) selectedHero = null;
+  }
 }
 
 // TODO: Learn more about interpolation in the Displaying Data chapter. https://angular.io/docs/dart/latest/guide/displaying-data.html
