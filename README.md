@@ -91,3 +91,16 @@ We travelled a great distance in this chapter
 We have much of the foundation we need to build an application. We're still missing a key piece: remote data access.
 
 In the next chapter, we’ll replace our mock data with data retrieved from a server using http.
+
+### Chapter 6 - We convert our service and components to use Angular's HTTP service
+
+#### Home Stretch
+
+We are at the end of our journey for now, but we have accomplished a lot.
+
+* We added the necessary dependencies to use HTTP in our application.
+* We refactored __HeroService__ to load heroes from a web API.
+* We extended __HeroService__ to support post, put and delete methods.
+* We updated our components to allow adding, editing and deleting of heroes.
+* We configured an in-memory web API.
+* We learned how to use Streams.
